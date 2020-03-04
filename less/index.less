@@ -30,35 +30,45 @@ footer, header, hgroup, menu, nav, section {
 	display: block;
 }
 
+<style>
+@import url('https://fonts.googleapis.com/css?family=Pontano+Sans&display=swap');
+</style>
+
 @light-gray: #d3d3d3;
 @dark-gray: #A9A9A9;
 
 
 body {
-	line-height: 1;
+	margin: 0 auto;
+
+	@media (max-width: 500px) {
+		width: 80%;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-content: center;
+
+	}
 
 	nav {
 		display: flex;
-		flex-direction: row;
 		flex-wrap: nowrap;
-		align-items: right;
-		justify-content: space-between;
-		text-decoration: none;
-		color: @dark-gray;
-		margin-left: 70%;
-	}
-
-	img {
-		margin: 3%;
+		justify-content: space-around;
+		a {
+			color: @dark-gray;
+			text-decoration: none;
+		}
 	}
 
 	h1 {
-		margin: 1%;
+		font-size: 2.3rem;
+		font-family: 'Pontano Sans', sans-serif;
+		
 	}
 
 	h2 {
 		border-bottom: 1px solid black;
-		margin-bottom: 1%;
+		align-items: center;
 	}
 
 	.intro {
@@ -66,31 +76,47 @@ body {
 		flex-direction: column;
 		justify-content: center;
 		align-items: center;
-		margin: 1%;
-		padding: 2%;
-	}
 
-	.skills {
-		.intro();
-		border: 1px solid black;
-	}
-
-	.work-history {
-		.skills();
-	}
-
-	.contact {
-		.skills();
-	}
-
-	.about-me {
-		.skills();
 	}
 
 	.mid-section {
 		display: flex;
 		flex-direction: row;
+		justify-content: space-evenly;
 	}
+
+	.about-me {
+		width: 70%;
+		border-bottom: 1px solid black;
+		align-items: center;
+	}
+
+	.skills {
+		width: 70%;
+		border-bottom: 1px solid black;
+		align-items: center;
+	}
+
+	.work-history {
+		width: 70%;
+		border-bottom: 1px solid black;
+		align-items: center;
+	}
+		
+
+	
+
+	.contact {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+		
+		border: 1px solid black;
+		background-color: @light-gray;
+	}
+
+	
 
 }
 ol, ul {
